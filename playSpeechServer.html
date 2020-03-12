@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Speech Server</title>
+    <meta content="text/html" charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+
+    <script type="text/javascript" src="assets/scripts/furoScrpits/BaseCommand.js"></script>
+    <script type="text/javascript" src="assets/scripts/furoScrpits/BaseEvent.js"></script>
+    <script type="text/javascript" src="assets/scripts/furoScrpits/LogConsole.js"></script>
+    <script type="text/javascript" src="assets/scripts/furoScrpits/Language.js"></script>
+    <script type="text/javascript" src="assets/scripts/jquery-3.3.1.min.js"></script>
+    <style>
+        button{
+            width: 45%;
+            height: 70px;
+            font-size: x-large;
+        }
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+    </style>
+</head>
+<body onbeforeunload="JSUnload()" ondragstart="return false;" ondrop="return false;" style="-ms-user-select:none;" oncontextmenu="return false;">
+<!--<h1>Play Speech Server:</h1>-->
+<button onclick="performAction('Blink')">Blink</button>
+<button onclick="performAction('Listening')">Listening</button>
+<button onclick="performAction('Ooops')">Oops</button>
+<button onclick="performAction('Reading')">Reading</button>
+<button onclick="performAction('Sad')">Sad</button>
+<button onclick="performAction('Smile')">Smile</button>
+<button onclick="performAction('static')">Static</button>
+<button onclick="performAction('Thinking')">Thinking</button>
+<button onclick="performAction('ThumbsUp')">ThumbsUp</button>
+<button onclick="performAction('Winking')">Winking</button>
+
+<script>
+
+    function performAction(action){
+
+        console.log("Action: ", action);
+        $.ajax({
+            type: "GET",
+            data: { key: action},
+            url: "/api/sendresponse"
+        });
+    }
+
+
+/*
+    setInterval(function(){
+        console.log("check");
+        $.getJSON("http://localhost:3003/api/getresponse", function(data) {
+
+            var key = data["key"];
+
+            console.log(key);
+
+            if (key !== "-1")
+            {
+                console.log("Speaking: "+ key);
+                document.getElementById('speak').innerHTML = key;
+
+                dataKey = -1;
+                console.log("sending Key:" + dataKey);
+
+                $.ajax({
+                    type: "GET",
+                    data: { key: dataKey},
+                    url: "/api/sendresponse"
+                });
+                key = JSON.parse(key);
+                action(key);
+
+            }
+        });
+
+    }, 1000);
+
+
+    function action(data) {
+        var aCode = data.code;
+
+        switch (aCode) {
+            case "001":
+                var speaking = data.playspeech;
+                document.getElementById('speak').innerHTML = "I am now speaking:::" + speaking;
+
+                PlaySpeech2(speaking);
+                break;
+            case "002":
+                SetWaistPitch(-20, 50);
+                DriveWheelTime(0.05, 0, 0.1);
+                document.getElementById('speak').innerHTML = "Forward";
+                break;
+            case "003":
+                SetWaistPitch(-20, 50);
+                DriveWheelTime(-0.05, 0, 0.1);
+                document.getElementById('speak').innerHTML = "Backward";
+                break;
+            case "004":
+                SetWaistPitch(-20, 50);
+                DriveWheelTime(0, 5, 0);
+                document.getElementById('speak').innerHTML = "Left";
+                break;
+            case "005":
+                SetWaistPitch(-20, 50);
+                DriveWheelTime(0, -5, 0);
+                document.getElementById('speak').innerHTML = "Right";
+                break;
+            default:
+                console.log("unknown");
+                break;
+        }
+    }
+
+
+    function OnJoystickControlled(strPara){
+        var btn_info = strPara.split(',')[4];
+
+
+        if(btn_info[0] == '1'){
+            PlaySpeech("Need help finding your way? I can help.  Come here and press the buttons on my screen.");
+        }
+
+        if(btn_info[1] == '1'){
+            PlaySpeech("Hi! my name is Francesca, I am here to help. ");
+        }
+
+        if(btn_info[2] == '1'){
+            PlaySpeech("Take a selfie with me.");
+        }
+
+        if(btn_info[3] == '1'){
+            PlaySpeech("Bye, bye.");
+        }
+
+    }
+
+*/
+
+
+
+
+</script>
+</body>
+</html>

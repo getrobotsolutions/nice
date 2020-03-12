@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html" charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <style>
+        <!--
+        body {margin:0;padding:0;}
+        -->
+    </style>
+    <script type="text/javascript" src="assets/scripts/jquery-3.3.1.min.js"></script>
+</head>
+
+<body style="text-align: center">
+<img id="avaImg" src="assets/avatar/static.gif" width="768" height="1024">
+
+<script>
+    setInterval(function(){
+        console.log("check");
+        $.getJSON("http://localhost:3003/api/getresponse", function(data) {
+
+            var key = data["key"];
+
+            console.log(key);
+
+            if (key !== "-1")
+            {
+                console.log("Speaking: "+ key);
+                document.getElementById('avaImg').src = "assets/avatar/" + key + ".gif";
+                dataKey = -1;
+                console.log("sending Key:" + dataKey);
+
+                $.ajax({
+                    type: "GET",
+                    data: { key: dataKey},
+                    url: "/api/sendresponse"
+                });
+            }
+        });
+
+    }, 1000);
+</script>
+
+
+
+
+</body>
+</html>

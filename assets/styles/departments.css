@@ -1,0 +1,290 @@
+.main-content{
+    height: auto;
+}
+.bmg{
+    width: 900px;
+    height: 1600px;
+    margin: 0 auto;
+    padding-top: 20px;
+    /*overflow-y: scroll;*/
+
+}
+.home{
+    float: left;
+    height: 57px;
+    padding-left: 10px;
+}
+.img-home {position: absolute;top: -60px;z-index: 99;height: 62px;cursor: pointer; cursor: hand;}
+.wrap{padding-top: 60px;}
+.part1{ height: 660px;margin-top: -22px;margin-left: -15px;}
+.part2{
+    background-color: #FF6600 ;
+    height: auto;
+    width: 616px;
+    margin-top: -20px;
+    padding: 15px;
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+ul.list1{
+    padding-top: 2px;
+    line-height: 64px;
+    font-size: 25px;
+    /*text-align: center;*/
+    margin-left: -60px;
+    font-weight: 500;
+    font-family: inherit;
+}
+ul.listul li:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    margin: 0px;
+
+}
+
+a,a:hover { text-decoration : none; color : #000; }
+#leftmenu h3 {
+    margin:0;
+//font-family: OpenSans-Regular;
+    font-size: 40px;
+    font-weight: 600;
+    padding:30px 45px;
+    border-top:1px solid #FF6600 ;
+    border-bottom:1px solid #FF6600 ;
+    cursor:pointer;
+    background-color:#FF6600   ;
+    color:#ffffff;
+    text-align:left;
+}
+
+#leftmenu h5 {
+    margin:0;
+    font-family:OpenSans-Regular;
+    font-weight: 500;
+    padding:30px 80px;
+    border-top:1px solid #153F65;
+    border-bottom:1px solid #236b8e;
+    cursor:pointer;
+    background-color:#153F65;
+    color:#ffffff;
+    text-align:left;
+}
+
+#leftmenu > ul {
+    margin:0;
+    padding:0;
+}
+#leftmenu > ul li {
+    padding-left:0px;
+    list-style-type:none;
+}
+#leftmenu > ul li  {
+    color:black;
+    font-weight: bolder;
+
+    font-size: 25px;
+    text-decoration: none;
+    padding: 9px 0 10px 30px;
+    line-height: 30px;
+
+}
+#leftmenu > ul li a:hover {
+    text-decoration:underline;
+}
+#leftmenu .current {
+    color:#006699;
+    text-decoration:underline;
+}
+
+.h5, h5 {
+    font-size: 21px;
+}
+.bdy{
+    margin-top: 10px;
+    line-height: 40px;
+    color: black;
+    font-size: 20px;
+
+}
+#title{
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 100;
+    padding-left: 55px;
+    font-family: OpenSans-Regular;
+
+}
+#HotelName{
+
+    font:bold;
+    color: #ffffff;
+}
+
+#HotelDesc{
+    color: #ffffff;
+}
+
+.btn-offer{
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+
+#btn, #mapBtn{background-color: white;border-color: white;}
+
+.restau-image{
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    height: 400px;
+}
+.icon{
+
+    width: 550px;
+    height: 380px;
+}
+#dialog-overlay {
+
+    /* set it to fill the whil screen */
+    width:100%;
+    height:100%;
+
+    /* transparency for different browsers */
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    background:#000;
+
+    /* make sure it appear behind the dialog box but above everything else */
+    position:absolute;
+    top:0; left:0;
+    z-index:3000;
+
+    /* hide it by default */
+    display:none;
+}
+
+#dialog-box {
+
+    /* css3 drop shadow */
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    /* css3 border radius */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    background:#eee;
+    /* styling of the dialog box, i have a fixed dimension for this demo */
+    width:950px;
+
+
+    /* make sure it has the highest z-index */
+    position:absolute;
+    top: 5% !important;
+    z-index:5000;
+
+    /* hide it by default */
+    display:none;
+}
+
+#dialog-box .dialog-content {
+    /* style the content */
+    max-height: 1700px;
+    overflow: hidden;
+    text-align:center;
+    padding:10px;
+    margin:13px;
+    color:#666;
+    font-family:arial;
+    font-size:11px;
+
+}
+
+a.button {
+    /* styles for button */
+    margin:10px auto 0 auto;
+    text-align:center;
+    display: block;
+    width:100px;
+    padding:  10px ;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 1;
+    font-size: 30px;
+
+    /* button color */
+    background-color: #b92c28;
+
+    /* css3 implementation :) */
+    /* rounded corner */
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+
+    /* drop shadow */
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+    /* text shaow */
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    position: relative;
+    cursor: pointer;
+
+}
+
+a.button:hover {
+    /*background-color: #c33100;  */
+}
+
+/* extra styling */
+#dialog-box .dialog-content p {
+    font-weight:700; margin:0;
+}
+
+#dialog-box .dialog-content ul {
+    margin:10px 0 10px 20px;
+    padding:0;
+    height:50px;
+}
+.eat-icon{
+    position: absolute;
+    top: -46px;
+    z-index: 1;
+    width: 150px;
+    right: -10px;
+}
+li.odd{background-color:#F8D7CD;}
+li.even{background-color: #FCECE8;}
+#change-us{color: rgb(255, 255, 255);background: #008a97;padding: 0px 10px;border-radius: 5px;}
+
+p{
+
+    margin: 0 0 0;
+}
+
+.department-box{
+    /*width: ;
+    height: 80px;*/
+    background-color: #da662e;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 40px;
+}
+.department-box .department-title{
+    color: white;
+
+    padding: 15px;
+}
+#dialog-box .dialog-content p {
+    text-align: center;
+    font-weight: 700;
+    margin: 0;
+    font-size: 40px;
+}

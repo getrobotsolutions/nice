@@ -1,0 +1,36 @@
+{
+  "name": "NICE App test",
+  "version": "1.0.0",
+  "description": "Nice App test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getrobotsolutions/MiOttawa_pro.git"
+  },
+  "keywords": [
+    "QnA",
+    "Service",
+    "node",
+    "ottawa"
+  ],
+  "author": "ARS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getrobotsolutions/MiOttawa_pro/issues"
+  },
+  "homepage": "https://github.com/getrobotsolutions/MiOttawa_pro#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "continuation-local-storage": "^3.2.1",
+    "ejs": "^2.6.2",
+    "espress": "0.0.0",
+    "express": "^4.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
+
+
